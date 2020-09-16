@@ -7,6 +7,8 @@ const html = await req.get("https://reactnativetutorial.net/css-selectors/"); //
 fs.writeFileSync('./test.html', html); // write it into a temp file
 const $ = await cheerio.load(html);
 const text = $('h1').text();
+// to scrape using class '.<classname>'
+// to scrape using id '#<idname>'
 console.log(text);
 }
 main();
